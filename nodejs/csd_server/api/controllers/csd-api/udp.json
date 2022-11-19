@@ -1,0 +1,7 @@
+[
+	{
+		"enable": true,
+		"port": 20001,
+		"handler": "udp_handler"
+	}
+]

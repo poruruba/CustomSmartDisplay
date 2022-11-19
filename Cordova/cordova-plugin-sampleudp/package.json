@@ -1,0 +1,10 @@
+{
+  "name": "cordova-plugin-sampleudp",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-sampleudp",
+    "platforms": [
+      "android"
+    ]
+  }
+}

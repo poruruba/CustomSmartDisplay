@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-sampleudp" version="0.0.1">
+    <name>SampleUdp</name>
+    <js-module src="www/plugin_sampleudp.js" name="sampleudp">
+        <clobbers target="sampleudp" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SampleUdp" >
+                <param name="android-package" value="jp.or.sample.plugin.SampleUdp.Main"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/jp/or/sample/plugin/SampleUdp/Main.java" target-dir="src/jp/or/sample/plugin/SampleUdp" />
+    </platform>
+</plugin>

@@ -1,0 +1,10 @@
+{
+  "name": "cordova-plugin-samplesensor",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-samplesensor",
+    "platforms": [
+      "android"
+    ]
+  }
+}

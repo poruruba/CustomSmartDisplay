@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="jp.or.sample.csd" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CustomSmartDisplay</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    
+    <preference name="Orientation" value="landscape" />
+    <icon src="res/icon.png" />
+
+    <platform name="android">
+        <preference name="Fullscreen" value="true"/>
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+
+<!--
+    <content src="index.html" />
+-->
+
+    <allow-navigation href="http://【Node.jsサーバのホスト名】:20080/cordova_base/*" />
+    <platform name="android">
+        <content src="http://【Node.jsサーバのホスト名】:20080/cordova_base/android/index.html" />
+    </platform>
+    
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

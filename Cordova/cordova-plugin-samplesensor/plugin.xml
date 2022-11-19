@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-samplesensor" version="0.0.1">
+    <name>SampleSensor</name>
+    <js-module src="www/plugin_samplesensor.js" name="samplesensor">
+        <clobbers target="samplesensor" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SampleSensor" >
+                <param name="android-package" value="jp.or.sample.plugin.SampleSensor.Main"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.SENSOR" />
+        </config-file>
+        <source-file src="src/android/jp/or/sample/plugin/SampleSensor/Main.java" target-dir="src/jp/or/sample/plugin/SampleSensor" />
+    </platform>
+</plugin>
